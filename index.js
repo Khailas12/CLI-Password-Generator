@@ -1,4 +1,6 @@
 const program = require('commander');
+const chalk = require('chalk');
+const clipboardy = require('clipboardy');
 
 const createPswd = require('./createPswd');
 
@@ -17,7 +19,6 @@ const prog = program.
 
 const { length, save, numbers, symbols } = prog.opts();
 
-
 const generatedPswd = createPswd(length, numbers, symbols);
 
-console.log(generatedPswd);
+console.log(chalk.green('Generated Password: ') + chalk.bold(generatedPswd));
