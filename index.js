@@ -1,7 +1,6 @@
 const program = require('commander');
-const log = console.log();
 
-const createPswd = require('createPswd');
+const createPswd = require('./createPswd');
 
 
 program.version('1.0.0').description('Password Generator');
@@ -19,6 +18,6 @@ const prog = program.
 const { length, save, numbers, symbols } = prog.opts();
 
 
-const generatedPswd = createPswd(length, numbers, symbols) ;
+const generatedPswd = createPswd(length, numbers, symbols);
 
-log(generatedPswd);
+console.log(generatedPswd);

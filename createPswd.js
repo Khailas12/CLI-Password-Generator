@@ -11,6 +11,6 @@ const createPswd = (
     hasSymbols ? (chars += symbols) : '';
 
     return chars;
-}
+};
 
-module.exports = createPswd
+module.exports = createPswd;
