@@ -21,4 +21,9 @@ const { length, save, numbers, symbols } = prog.opts();
 
 const generatedPswd = createPswd(length, numbers, symbols);
 
-console.log(chalk.green('Generated Password: ') + chalk.bold(generatedPswd));
+// Copy to clipboard
+clipboardy.writeSync(generatedPswd);
+
+console.log(chalk.green('Generated Password: ') + chalk.bold(generatedPswd));   // Generated Paswd
+
+console.log(chalk.blue('Password Copied to Clipboard'));
