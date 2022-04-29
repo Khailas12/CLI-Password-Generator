@@ -1,6 +1,6 @@
 const program = require('commander');
 const chalk = require('chalk');
-const clipboardy = require('clipboardy');
+import clipboard from 'clipboardy';
 
 const createPswd = require('./createPswd');
 
@@ -22,7 +22,7 @@ const { length, save, numbers, symbols } = prog.opts();
 const generatedPswd = createPswd(length, numbers, symbols);
 
 // Copy to clipboard
-clipboardy.writeSync(generatedPswd);
+clipboard.writeSync(generatedPswd);
 
 console.log(chalk.green('Generated Password: ') + chalk.bold(generatedPswd));   // Generated Paswd
 
